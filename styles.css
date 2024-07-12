@@ -2,36 +2,49 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    flex: a;
     font-family: Roboto;
     height: 100vh;
     margin: 0;
 }
 
-img {
-    height: 100px    
-}
-
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #1f2937;
-} 
+    padding: 10px 180px
+}
 
 .header .logo {
     color: #f9faf8;
     font-size: 24px;
-    font-weight: bold;
-    padding: 10px
+    font-weight: 700;
 }
 
 .hero-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     background-color: #1f2937;
-    padding-bottom: 50px;
+    padding: 80px 180px;
+}
+
+/*TODO: is there any way to avoid wrapping the img in a div?*/
+.hero-container div {
+    flex: 1;
+}
+
+.hero-container img {
+    float: right;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.hero-container button {
+    margin-top: 14px;
+    padding: 6px 20px;
+    font-weight: 900;
+    align-self: flex-start;
 }
 
 .hero-content {
@@ -41,27 +54,119 @@ img {
 
 .hero-content .title {
     font-size: 48px;
-    font-weight: extra-bold;
+    font-weight: 800;
     color: #f9faf8;
 }
 
 .hero-content .text {
     font-size: 18px;
     color: #E5E7EB;
+    font-weight: 300;
 }
 
 .hero-content button {
     border: none;
-    border-radius: 6px;
     flex: 0;
 }
 
-.hero-content {
-    flex: 1;
+.content {
+    display: flex;
+    flex-direction: column;
 }
 
-.content {
-    flex: 1
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.information .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1f2937;
+    margin: 30px 30px 0px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 30px 60px 80px
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    flex-basis: 170px;
+}
+
+.card img {    
+    border: solid #3882f6;
+}
+
+.card .text {    
+    flex-grow: 0;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 120px 180px
+}
+
+.quote-container .quote{
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 300;
+    font-style: italic;
+    text-wrap: balance;
+    line-height: 1.3;
+}
+
+.quote-container .author{
+    font-size: 16px;
+    color: #1f2937;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.call-to-action {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 120px 100px;
+    padding: 50px;
+    background-color: #3882f6;
+    border-radius: 6px;
+}
+
+.call-to-action .title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.call-to-action button {    
+    padding: 6px 30px;
+}
+
+.call-to-action .subtext {
+    color: #ffffff;
 }
 
 .footer {
@@ -74,8 +179,14 @@ img {
 }
 
 button {
-    color: #E5E7EB;
+    color: #ffffff;
     background-color: #3882f6;
+    border-color: #ffffff;
+    font-weight: 900;
+    border-radius: 6px;
+    flex: 0;
+    text-wrap: nowrap;
+    border-style: solid;
 }
 
 ul {
@@ -86,11 +197,30 @@ ul {
 }
 
 li {
-    padding: 10px
+    margin: 10px
 }
 
 a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #E5E7EB
+    text-decoration: none;
+    font-size: 18px;
+    color: #E5E7EB;
+    font-weight: 300;
+}
+
+text {
+    font-size: 18px
+}
+
+img {    
+    border-radius: 16px;
+}
+
+.text-highlight{
+    background-color: #1f2937;
+    color: #E5E7EB;
+    text-decoration: none;
+}
+
+em {
+    text-decoration: underline;
 }
